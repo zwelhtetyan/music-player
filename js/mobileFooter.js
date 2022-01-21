@@ -7,6 +7,7 @@ const notiAlertContainerToHide = document.querySelector('.noti-alert-container')
 const mobileUserAccountToHide = document.querySelector(".mobile-user-account");
 const settingContainerToHide = document.querySelector(".setting-container");
 const settingIconMobileToHide = document.querySelector(".setting-icon-mobile");
+const actionBar = document.querySelector(".action-bar");
 
 for (let i = 0; i < mobileMenuItem.length; i++) {
     const allMobileMenu = mobileMenuItem[i];
@@ -22,6 +23,8 @@ for (let i = 0; i < mobileMenuItem.length; i++) {
         settingContainerToHide.style.left = "-100%";
         settingIconMobileToHide.classList.remove("fa-spin")
         settingIconMobileToHide.classList.remove("setting-icon-mobile-active");
+
+
     })
 }
 
