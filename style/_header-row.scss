@@ -1,0 +1,41 @@
+.header-row {
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: $soft-white;
+    border-bottom: 1px solid $borderColor;
+    .search-music {
+        border-radius: 20px;
+        &:focus + .search-icon {
+            display: none !important;
+        }
+    }
+    .noti {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: center;
+        line-height: 16px;
+        border-radius: 50%;
+        right: -5px;
+        top: -5px;
+        color: $white;
+    }
+    .rotate-setting {
+        animation: rotate-setting 2s linear infinite;
+        color: #2196f3;
+    }
+
+    @keyframes rotate-setting {
+        from {
+            transform: rotate(0);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

@@ -1,0 +1,234 @@
+.desktop-action-bar-8vh {
+    height: 8vh;
+    position: fixed;
+    left: 0;
+    bottom: -100%;
+    transition: 0.3s ease-in-out;
+    display: flex; // show when playing
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: #607d8b;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    .current-song-container {
+        @include flexBox (row);
+        justify-content: center;
+        width: 25%; // first
+        .current-song {
+            @include flexBox (row);
+            .current-song-img-container {
+                margin-right: 20px;
+            }
+            .current-song-img {
+                width: 70px;
+                border-radius: 50%;
+                margin-top: -30px;
+            }
+        }
+    }
+    .current-song-action {
+        width: 53%; // second
+        @include flexBox (row);
+        padding: 0 30px;
+        justify-content: center;
+        .action-button-container {
+            @include flexBox (row);
+            .action-button {
+                cursor: pointer;
+            }
+        }
+        // .play {
+        //     @include flexBox(row);
+        //     align-items: center;
+        //     width: 35px;
+        //     height: 35px;
+        //     border-radius: 50%;
+        //     background-color: green;    
+        //     color: $white;
+        //     align-items: center;
+        //     justify-content: center;
+        //     margin: 0 20px;
+        // }
+        .pause {
+            display: flex;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: red;
+            color: $white;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;
+        }
+        .progress-container {
+            width: 50%;
+            margin: 0 20px;
+            display: flex;
+            cursor: pointer;
+            background-color: black;
+            .inner-progress {
+                width: 0%;
+                height: 5px;
+                background-color: red;
+                flex-basis: 20%;
+            }
+        }
+    }
+    .volume {
+        width: 12%; // third
+        display: flex;
+        align-items: center;
+        margin: 0 15px;
+        .range {
+            width: 100%;
+            height: 4px;
+            background-color: black;
+            -webkit-appearance: none;
+        }
+    }
+    .favorite-container {
+        width: 4%; //fourth
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .favorite {
+            padding: 0 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+    .expend-button-container {
+        cursor: pointer;
+        width: 6%; // five
+        @include flexBox (row);
+        justify-content: center;
+        .expend-button {
+            font-size: 35px;
+        }
+    }
+    .cd-container {
+        display: none;
+    }
+}
+.desktop-action-bar-100vh {
+    z-index: 1;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    display: flex; // show when playing
+    flex-direction: column;
+    width: 100%;
+    background-color: #607d8b;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .current-song-container {
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .current-song {
+            text-align: center;
+        }
+        .current-song-img-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            justify-content: center;
+            .current-song-img {
+                border-radius: 50%;
+                width: 300px;
+                
+            }
+        }
+        .playing {
+            animation: rotate 5s linear infinite;
+        }
+        
+        .song-title-desktop-footer {
+            font-size: 25px;
+        }
+    }
+    .current-song-action {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        .progress-container {
+            width: 50%;
+            margin: 0 20px;
+            display: flex;
+            cursor: pointer;
+            background-color: black;
+            .inner-progress {
+                width: 0%;
+                height: 5px;
+                background-color: red;
+                flex-basis: 20%;
+            }
+        }
+        .progress-container {
+            margin: 10px 0;
+        }
+        .action-button-container {
+            display: flex;
+            align-items: center;
+            .action-button,.play-and-pause {
+                cursor: pointer;
+            }
+            .pause {
+                display: flex;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: red;
+                color: $white;
+                align-items: center;
+                justify-content: center;
+                margin: 0 20px;
+            }
+        }
+        .duration {
+            font-weight: 700;
+            color: #ffc107;
+        }
+    }
+    .favorite-container {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .volume {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .range {
+            width: 10%;
+            height: 4px;
+            background-color: black;
+            -webkit-appearance: none;
+        }
+    }
+    .expend-button-container {
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        top: 70px;
+        .expend-button {
+            font-size: 35px;
+        }
+    }
+}
+

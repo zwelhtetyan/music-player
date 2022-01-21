@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./vendor/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="./vendor/feather-icons/feather.css" />
+    <link rel="stylesheet" href="./vendor/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./vendor/slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="icon" href="./img/soundcloud.png" type="image/gif" sizes="16x16">
+    <!-- Primary Meta Tags -->
+    <title>Music Box</title>
+    <meta name="title" content="Music Box">
+    <meta name="description" content="hope you enjoy this.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Music Box">
+    <meta property="og:description" content="hope you enjoy this.">
+    <meta property="og:image" content="./img/desktop-preview.png">
+
+</head>
+
+<body class="main-body">
+    <!--main container-->
+    <div class="container-fluid main-container overflow-hidden" style="height: 100vh">
+        <!--header row-->
+        <div class="header-row row">
+            <div class="col-2">
+                <!--brand-->
+                <div class="d-flex align-items-center brand left-side-header">
+                    <img src="./img/soundcloud.png" alt="" width="42px" />
+                    <div class="mb-0 p-0 ms-3 fw-bold fs-5">Music Box</div>
+                </div>
+            </div>
+            <div class="col-7">
+                <!--search box-->
+                <div class="search-box center-header">
+                    <div class="input-container position-relative">
+                        <input type="text" class="form-control search-music" placeholder="Search Music" />
+                        <i class="feather-search position-absolute search-icon" style="top: 10px; right: 15px"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <!--icon and profile-->
+                <div class="icon-and-profile d-flex align-items-center justify-content-end">
+                    <i class="feather-settings setting-icon-desktop" style="font-size: 20px; cursor: pointer"></i>
+                    <i class="feather-bell desktop-noti ms-3 position-relative"
+                        style="font-size: 20px; cursor: pointer">
+                        <span class="bg-danger position-absolute noti">1</span>
+                    </i>
+                    <div class="profile d-flex align-items-center ms-3" style="cursor: pointer">
+                        <img src="./img/week end.jpeg" width="40px" alt="" style="border-radius: 50%" />
+                        <p class="mb-0 p-0 ms-2 fw-bold user-name-desktop"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--main row-->
+        <div class="row main-row" style="height: 90vh; overflow: hidden; margin-top: 62px">
+            <!--left side-->
+            <div class="col-2 left-side py-2">
+                <!--menu-->
+                <div class="menu-container">
+                    <div class="menu-title text-uppercase">Discover</div>
+                    <p class="d-flex align-items-center">
+                        <i class="fas fa-fire menu-icon me-2"></i> HotList
+                    </p>
+                    <p class="d-flex align-items-center">
+                        <i class="far fa-image menu-icon me-2"></i> Album
+                    </p>
+                    <p class="d-flex align-items-center">
+                        <i class="far fa-user menu-icon me-2"></i> Artists
+                    </p>
+                    <p class="d-flex align-items-center">
+                        <i class="fas fa-video menu-icon me-2"></i> Music
+                        Video
+                    </p>
+                    <div class="menu-title text-uppercase" style="margin-top: 25px">
+                        Library
+                    </div>
+                    <p class="d-flex align-items-center">
+                        <i class="far fa-clock menu-icon me-2"></i> Recently
+                        Played
+                    </p>
+                    <p class="d-flex align-items-center">
+                        <i class="far fa-heart menu-icon me-2"></i>
+                        Favorites
+                    </p>
+                    <p class="d-flex align-items-center">
+                        <i class="fas fa-arrow-down menu-icon me-2"></i>
+                        Downloaded
+                    </p>
+                </div>
+            </div>
+
+            <!--center-->
+            <div class="col-7 center py-2" id="center">
+                <!--logo and setting-->
+                <div class="logo-and-setting">
+                    <div class="d-flex align-items-center brand left-side-header">
+                        <img src="./img/soundcloud.png" alt="" width="42px" />
+                        <div class="mb-0 p-0 ms-3 fw-bold fs-5">
+                            Music Box
+                        </div>
+                    </div>
+                    <div>
+                        <i class="feather-bell me-3 position-relative mobile-noti"
+                            style="font-size: 20px; cursor: pointer">
+                            <span class="bg-danger position-absolute noti">1</span>
+                        </i>
+                        <i class="fas fa-cog setting-icon-mobile" style="font-size: 23px; cursor: pointer"></i>
+                    </div>
+                </div>
+
+                <!--search-box-mobile-->
+                <div class="search-box center-header search-box-mobile" id="search-box-mobile">
+                    <div class="input-container position-relative">
+                        <input type="text" class="form-control search-music" placeholder="Search Music" />
+                        <i class="feather-search position-absolute search-icon" style="top: 10px; right: 15px"></i>
+                    </div>
+                </div>
+
+                <!--songs and artists-->
+                <div style="margin-top: 10px" class="songs-and-artists">
+                    <!--just for you-->
+                    <div class="just-for-you">
+                        <p class="mb-0 fw-bold fs-4">Just For You</p>
+                        <div class="song-container container-fluid p-0">
+                            <div class="row">
+                                <div class="slide">
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/bad guy.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="song-title mb-0 fw-bold">
+                                                    Bad Guy
+                                                </p>
+                                                <p class="artist-name mb-0">
+                                                    Billie Eilish
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/powfu.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="song-title mb-0 fw-bold">
+                                                    Death Bed
+                                                </p>
+                                                <p class="artist-name mb-0">
+                                                    Powfu
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/drake.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="song-title mb-0 fw-bold">
+                                                    God's Plan
+                                                </p>
+                                                <p class="artist-name mb-0">
+                                                    Drake
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/oliver.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="song-title mb-0 fw-bold">
+                                                    Traitor
+                                                </p>
+                                                <p class="artist-name mb-0">
+                                                    Olivia Rodrigo
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/week end.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="song-title mb-0 fw-bold">
+                                                    Sacrifice
+                                                </p>
+                                                <p class="artist-name mb-0">
+                                                    The Weeknd
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/dulipa.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="song-title mb-0 fw-bold">
+                                                    Levitating
+                                                </p>
+                                                <p class="artist-name mb-0">
+                                                    Dua Lipa
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/nickiminaj.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="song-title mb-0 fw-bold">
+                                                    All Eyes ...
+                                                </p>
+                                                <p class="artist-name mb-0">
+                                                    Nicki Minaj
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/post melone.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="song-title mb-0 fw-bold">
+                                                    Circle
+                                                </p>
+                                                <p class="artist-name mb-0">
+                                                    Post Malone
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--popular artists-->
+                    <div class="popular-artists" style="margin-top: 10px">
+                        <p class="mb-0 fw-bold fs-4">Popular Artists</p>
+                        <div class="song-container container-fluid p-0">
+                            <div class="row">
+                                <div class="slide">
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/billie.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="mb-0 fw-bold text-center my-2" style="font-size: 15px">
+                                                    Billie Eilish
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/wiz khalifa.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="mb-0 fw-bold text-center my-2" style="font-size: 15px">
+                                                    Wiz Khalifa
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/song  the weekend.jpeg" alt=""
+                                                        class="artist-photo" />
+                                                </div>
+                                                <p class="mb-0 fw-bold text-center my-2" style="font-size: 15px">
+                                                    The weeknd
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/olivia rodrigo.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="mb-0 fw-bold text-center my-2" style="font-size: 15px">
+                                                    Olivia Rodrigo
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/halsey.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="mb-0 fw-bold text-center my-2" style="font-size: 15px">
+                                                    Halsey
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/mamarosoe.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="mb-0 fw-bold text-center my-2" style="font-size: 15px">
+                                                    MarMar Oso
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/ed sheeran.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="mb-0 fw-bold text-center my-2" style="font-size: 15px">
+                                                    Ed Sheeran
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="card music-card">
+                                            <div class="card-body">
+                                                <div class="artist-photo-container">
+                                                    <img src="./img/ali fatie.jpeg" alt="" class="artist-photo" />
+                                                </div>
+                                                <p class="mb-0 fw-bold text-center my-2" style="font-size: 15px">
+                                                    Ali Gatie
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+            <!--right-side-->
+            <div class="col-3 right-side py-2">
+                <!--playlist-->
+                <div class="playlist-container" id="playlist-container" style="margin-top: 10px">
+                    <p class="fw-bold fs-4">Playlist</p>
+                    <!--total playlist-->
+                    <div class="total-playlist">
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/week end.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Sacrifice
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        The Weeknd
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/powfu.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Death Bed
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Powfu
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/olivia rodrigo.jpeg" alt="" width="50px"
+                                        style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Happier
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Olivia Rodrigo
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/die for me.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Die For Me
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Post Malone
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/dulipa.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Levitating
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Dua Lipa
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/justin biber.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Intentions
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Justin Bieber
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/song  the weekend.jpeg" alt="" width="50px"
+                                        style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Die For You
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        The Weeknd
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/ocean eyes.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Ocean Eyes
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Billie Eilish
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/post melone.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Circle
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Post Malone
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/mamarosoe.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Ruthless
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        MarMar Oso
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/oliver.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Traitor
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Olivia Rodrigo
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/the way that you see me.jpeg" alt="" width="50px"
+                                        style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        The Way ThatU...
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Powfu
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/bad guy.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Bad Guy
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Billie Eilish
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/billie.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Lost Cause
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Billie Eilish
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/all eyes on you.jpeg" alt="" width="50px"
+                                        style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        All Eyes On You
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        NIcki Minaj
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/die for me.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Psycho
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Post Malone
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/before you go.jpeg" alt="" width="50px"
+                                        style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Before You Go
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Lewis Capaldi
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="song-container song-container-right-side d-flex align-items-center">
+                            <div class="me-auto d-flex align-items-center" style="cursor: pointer">
+                                <div class="song-img">
+                                    <img src="./img/post melone.jpeg" alt="" width="50px" style="border-radius: 7px" />
+                                </div>
+                                <div class="song-name-and-artist ms-3">
+                                    <p class="mb-0 fw-bold" style="font-size: 17px">
+                                        Sunflower
+                                    </p>
+                                    <p class="mb-0 artist-name" style="font-size: 15px">
+                                        Post Malone
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <i class="feather-more-vertical" style="font-size: 25px"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--for notification alert-->
+    <div class="noti-alert-container">
+        <div class="container noti-alert">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center justify-content-center noti-left">
+                    <!--noti img-->
+                    <div class="noti-img-container d-flex align-items-center justify-content-center">
+                        <img src="./img/undraw1.svg" alt="" class="noti-img" />
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-center noti-right">
+                    <div class="noti-message">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <i class="feather-x close-btn-noti" style="cursor: pointer;"></i>
+    </div>
+
+    <!--mobile footer-->
+    <div class="mobile-footer">
+        <a href="#" class="mobile-menu-item mobile-home">
+            <i class="feather-home"></i>
+        </a>
+        <a href="#search-box-mobile" class="mobile-menu-item">
+            <i class="feather-search mobile-search" style="cursor: pointer"></i>
+        </a>
+        <a href="#playlist-container" class="mobile-menu-item">
+            <i class="feather-music mobile-music"></i>
+        </a>
+        <i class="mobile-menu-item feather-user mobile-user" style="cursor: pointer"></i>
+    </div>
+
+    <!--desktop action bar-->
+    <div class="desktop-action-bar action-bar desktop-action-bar-100vh">
+        <!--current-song-->
+        <div class="current-song-container">
+            <div class="current-song">
+                <div class="current-song-img-container">
+                    <img src="" alt="" class="current-song-img current-song-img-desktop-footer" />
+                </div>
+                <div class="current-song-title">
+                    <p class="mb-0 song-title-desktop-footer fw-bold"></p>
+                    <p class="mb-0 artist-name-desktop-footer"></p>
+                </div>
+            </div>
+        </div>
+        <!--action-->
+        <div class="current-song-action">
+            <!--action button-->
+            <div class="action-button-container">
+                <i class="action-button feather-rewind backward"></i>
+                <div class="pause play-and-pause">
+                    
+                </div>
+                <i class="action-button feather-fast-forward forward"></i>
+            </div>
+            <!--progress-->
+            <div class="progress-container">
+                <div class="inner-progress"></div>
+            </div>
+            <!--duration-->
+            <div class="duration">
+                2:12/3:40
+            </div>
+        </div>
+        <!--favorite-->
+        <div class="favorite-container" style="cursor: pointer;">
+            <i class=" favorite"></i>
+        </div>
+        <!--volume-->
+        <div class="volume">
+            <!-- <div class="range"></div> -->
+            <input type="range" min="0" max="1" value="1" step="0.05" class="range" />
+        </div>
+        <!--expend button-->
+        <div class="expend-button-container">
+            <i class="feather-chevron-down expend-button"></i>
+        </div>
+    </div>
+
+    <!--setting-->
+    <div class="setting-container">
+        <div class="container py-3">
+            <div class="row" style="padding-top: 45px; padding-bottom: 42px;">
+                <div class="col-md-6 offset-md-3">
+                    <!--mode container-->
+                    <div class="mt-5 mode-container">
+                        <div class="dark-mode-button setting-menu">
+                            <i class="feather-moon me-2 setting-menu-icon"></i>
+                            <p class="mb-0 fw-bold">Dark Mode</p>
+                        </div>
+                        <div class="light-mode-button setting-menu">
+                            <i class="feather-sun me-2 setting-menu-icon"></i>
+                            <p class="mb-0 fw-bold">Light Mode</p>
+                        </div>
+                        <div class="setting-menu">
+                            <i class="feather-clock me-2 setting-menu-icon"></i>
+                            <p class="mb-0 fw-bold">Timer</p>
+                        </div>
+                        <div class="setting-menu">
+                            <i class="feather-headphones me-2 setting-menu-icon"></i>
+                            <p class="mb-0 fw-bold">Streaming Quality</p>
+                        </div>
+                        <div class="setting-menu">
+                            <i class="feather-unlock me-2 setting-menu-icon"></i>
+                            <p class="mb-0 fw-bold">Lock Screen Player</p>
+                        </div>
+                        <div class="setting-menu">
+                            <i class="feather-sliders me-2 setting-menu-icon"></i>
+                            <p class="mb-0 fw-bold">Equalizer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--backward button-->
+        <div class="backward-button-container">
+            <i class="feather-arrow-left backward-button"></i>
+        </div>
+    </div>
+
+    <!--mobile user account-->
+    <div class="mobile-user-account">
+        <div class="container py-3">
+            <div class="row" style="padding-top: 70px;padding-bottom: 42px;">
+                <div class="col-md-6 offset-md-3">
+                    <!--user profile-->
+                    <div class="user-profile">
+                        <div class="user-img-mobile">
+                            <img src="./img/week end.jpeg" alt="" class="user-img">
+                        </div>
+                        <div class="user-name-mobile fw-bold fs-4 user-name-mobile">
+                            
+                        </div>
+                    </div>
+                    <!--mode container-->
+                    <div class="mt-4 mode-container">
+                        <div class="menu-title text-uppercase fw-bold fs-5 mb-2">
+                            Discover
+                        </div>
+                        <div class="setting-menu">
+                            <p class="d-flex align-items-center m-0">
+                                <i class="fas fa-fire menu-icon me-2"></i>
+                                HotList
+                            </p>
+                        </div>
+                        <div class="setting-menu">
+                            <p class="d-flex align-items-center m-0">
+                                <i class="far fa-image menu-icon me-2"></i>
+                                Album
+                            </p>
+                        </div>
+                        <div class="setting-menu">
+                            <p class="d-flex align-items-center m-0">
+                                <i class="far fa-user menu-icon me-2"></i>
+                                Artists
+                            </p>
+                        </div>
+                        <div class="setting-menu">
+                            <p class="d-flex align-items-center m-0">
+                                <i class="fas fa-video menu-icon me-2"></i>
+                                Music Video
+                            </p>
+                        </div>
+                        <div class="menu-title text-uppercase fw-bold fs-5 mb-2">
+                            Library
+                        </div>
+                        <div class="setting-menu">
+                            <p class="d-flex align-items-center m-0">
+                                <i class="far fa-clock menu-icon me-2"></i>
+                                Recently Played
+                            </p>
+                        </div>
+                        <div class="setting-menu">
+                            <p class="d-flex align-items-center m-0">
+                                <i class="far fa-heart menu-icon me-2"></i>
+                                Favorites
+                            </p>
+                        </div>
+                        <div class="setting-menu">
+                            <p class="d-flex align-items-center m-0">
+                                <i class="fas fa-arrow-down menu-icon me-2"></i>
+                                Downloaded
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--backward button-->
+        <div class="backward-button-container-mobile">
+            <i class="feather-arrow-left backward-button"></i>
+        </div>
+    </div>
+
+    <!--registration-->
+    <div class="registration-container">
+        <div class="registration container-fluid">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="./img/undraw6.svg" alt="" class="registration-img">
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <form class="form d-flex align-items-center justify-content-center flex-column w-100">
+                        <input type="text" required class="form-control user-name-input" placeholder="Enter your name">
+                        <div class="register-button-container">
+                            <button class="register-button btn btn-primary mt-4">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+
+    <audio src="" class="audioTag"></audio>
+
+
+    <!--register-->
+    <script src="./js/register.js"></script>
+    <!--jquery [only for slick]-->
+    <script src="./vendor/jquery/jquery.js"></script>
+    <!--slick-->
+    <script src="./vendor/slick-1.8.1/slick/slick.js"></script>
+    <!--using slick-->
+    <script src="./js/jsforslick.js"></script> 
+    <!--for noti alert-->
+    <script src="./js/noti.js"></script>
+    <!--for setting-->
+    <script src="./js/setting.js"></script>
+    <!--for mobile footer-->
+    <script src="./js/mobileFooter.js"></script>
+    <!--for mobile user account-->
+    <script src="./js/mobileuseraccount.js"></script>
+    <!--main js-->
+    <script src="./js/main.js"></script>
+    <!--for dark mode-->
+    <script src="./js/darkmode.js"></script>
+</body>
+
+</html>

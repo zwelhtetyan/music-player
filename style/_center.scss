@@ -1,0 +1,67 @@
+.center {
+    background-color: $white;
+    border: 1px solid $centerBorder;
+    .logo-and-setting {
+        border-bottom: 1px solid #dfd4d4fa;
+        padding: 10px 15px;
+        background-color: $soft-white;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 3;
+        .noti {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            font-size: 15px;
+            font-family: sans-serif;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 50%;
+            right: 4px;
+            top: -5px;
+            color: $white;
+        }
+
+    }
+    .songs-and-artists {
+        height: 78vh;
+        overflow-y: overlay;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .music-card {
+        margin: 10px;
+        border: none;
+        transition: 0.3s;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        &:hover {
+            transform: scale(0.99);
+        }
+    }
+    .artist-photo {
+        width: 100%;
+        border-radius: 15px;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    .song-title {
+        font-size: 17px;
+    }
+    .artist-name {
+        font-size: 14px;
+        color: $text-black;
+    }
+    .search-box-mobile {
+        display: none;
+        padding-top: 70px;
+    }
+    
+}

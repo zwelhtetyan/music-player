@@ -1,0 +1,31 @@
+.left-side {
+    background-color: $white;
+    // @include overflow (hidden);
+    p {
+        cursor: pointer;
+        user-select: none;
+        padding: 10px 5px;
+        margin: 0;
+        border-radius: 5px;
+        &:hover {
+            background-color: $soft-white;
+            // background-color: #dfdede;
+        }
+    }
+    .menu-container {
+        margin-top: 20px;
+        height: 78vh;
+        overflow-y: overlay;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .menu-title {
+            margin-bottom: 10px;
+            color: $text-black;
+        }
+        .menu-icon {
+            font-size: 19px;
+        }
+    }
+    
+}

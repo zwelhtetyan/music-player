@@ -1,0 +1,124 @@
+*,*:before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1100px) {
+    .main-container {
+        height: auto !important;
+        .main-row {
+            height: auto !important;
+            margin-top: 0px !important;
+        }
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .header-row {
+        display: none;
+    }
+    .left-side {
+        display: none;
+    }
+    .right-side {
+        .playlist-container {
+            margin-top: 10px !important;
+            padding-bottom: 98px;
+        }
+        width: 100%;
+        
+    }
+    .center {
+        height: auto;
+        width: 100%;
+        .logo-and-setting {
+            display: flex;
+        }
+        .songs-and-artists {
+            height: auto;
+        }
+        .just-for-you {
+            margin-top: 70px !important;
+        }
+    }
+    .mobile-footer {
+        display: flex;
+    }
+    .desktop-action-bar-100vh {
+        .current-song-img {
+            width: 200px !important;
+        }
+        .volume {
+            display: none;
+        }
+    }
+    .desktop-action-bar-8vh {
+        padding: 0 20px;
+        .forward,.backward {
+            display: none;
+        }
+        .duration {
+            display: none;
+        }
+        .progress-container {
+            display: none;
+            margin: 0 !important;
+        }
+        .volume {
+            display: none;
+        }
+        .expend-button-container {
+            display: none;
+        }
+
+        .current-song-container {
+            width: 100%;
+            justify-content: start;
+            .current-song-img {
+                width: 65px !important;
+            }
+        }
+        .current-song-action {
+            width: auto;
+            padding: 0;
+            .play-and-pause {
+                margin: 0;
+            }
+        }
+        .favorite-container {
+            margin-left: 20px;
+            .favorite {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .noti-img {
+        width: 70%;
+    }
+    .desktop-action-bar-100vh {
+        .progress-container {
+            width: 80% !important;
+        }
+    }
+    .registration-img {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .favorite-container,.current-song-action {
+        margin-top: 10px !important;
+    }
+    .current-song-img-container {
+        margin-bottom: 10px !important;
+    }
+    .desktop-action-bar-100vh {
+        justify-content: start;
+    }
+
+}

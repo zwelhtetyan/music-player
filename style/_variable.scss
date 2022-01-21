@@ -1,0 +1,19 @@
+$white: #fdfdfd;
+$soft-white: #e4e6eb;
+$dark: #3a3a3a;
+$borderColor: #dfd4d4fa;
+$centerBorder: #e5dede;
+$text-black: rgba(0, 0, 0, 0.5);
+$text-white: rgba(255, 255, 255, 0.5);
+$dark-hover: #1a1a1a;
+$activeColor: #2196f3;
+
+@mixin overflow ($type){
+    overflow: $type;
+}
+
+@mixin flexBox ($direction) {
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+}

@@ -1,0 +1,76 @@
+.dark-mode {
+    background-color: black;
+    .header-row {
+        background-color: $dark;
+        border: none;
+        color: $white;
+        .search-icon {
+            color: black;
+        }
+    }
+
+    .left-side {
+        background-color: black;
+        color: $white;
+        .menu-title {
+            color: $text-white;
+        }
+        p:hover {
+            background-color: $dark-hover;
+        }
+    }
+    .center {
+        background-color: black;
+        color: $white;
+        border: 1px solid #1a1919;
+        .music-card {
+            background-color: black;
+        }
+        .artist-name {
+            color: $text-white;
+        }
+        .logo-and-setting {
+            background-color: $dark;
+            border: none;
+            color: $white;
+        }
+    }
+    .right-side {
+        background-color: black;
+        color: $white;
+        .artist-name {
+            color: $text-white !important;
+        }   
+        .song-container:hover {
+            background-color: $dark-hover;
+        }
+    }
+    .desktop-action-bar {
+        background-color: #607d8b;
+        border-top: $borderColor;
+        color: $white;
+    }
+    .mobile-footer {
+        background-color: $dark;
+        color: $white;
+        border-top: none;
+    }
+    .noti-alert-container {
+        background-color: black;
+        color: $white;
+    }
+    .setting-container {
+        background-color: black;
+        color: $white;
+        .setting-menu {
+            background-color: $dark-hover;
+        }
+    }
+    .mobile-user-account {
+        background-color: black;
+        color: $white;
+        .setting-menu {
+            background-color: $dark-hover;
+        }
+    }
+}

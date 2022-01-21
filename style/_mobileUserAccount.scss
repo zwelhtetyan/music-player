@@ -1,0 +1,44 @@
+.mobile-user-account {
+    overflow-y: overlay;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: $white;
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    .setting-menu {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: $soft-white;
+        .setting-menu-icon {
+            font-size: 20px;
+        }
+    }
+    .light-mode-button {
+        display: none;
+    }
+    .backward-button-container-mobile {
+        cursor: pointer;
+        position: absolute;
+        left: 5px;
+        top: 67px;
+        .backward-button {
+            font-size: 30px;
+        }
+    }
+    .user-profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .user-img {
+            width: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    }
+}
