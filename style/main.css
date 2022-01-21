@@ -133,6 +133,10 @@
   color: #fdfdfd;
 }
 
+.center .logo-and-setting .setting-icon-mobile-active {
+  color: #2196f3 !important;
+}
+
 .center .songs-and-artists {
   height: 78vh;
   overflow-y: overlay;
@@ -656,8 +660,8 @@
   color: black;
 }
 
-.mobile-footer .homeIcon-mobile {
-  color: #2196f3;
+.mobile-footer .active-icon {
+  color: #2196f3 !important;
 }
 
 *, *:before, *::after {
@@ -903,8 +907,11 @@
 
 .dark-mode .mobile-footer {
   background-color: #3a3a3a;
-  color: #fdfdfd;
   border-top: none;
+}
+
+.dark-mode .mobile-footer .mobile-menu-item {
+  color: #fdfdfd;
 }
 
 .dark-mode .noti-alert-container {
@@ -937,7 +944,7 @@
   left: -100%;
   background-color: #fdfdfd;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   height: 100vh;
 }
 
@@ -1076,7 +1083,7 @@
   height: 100vh;
   position: fixed;
   z-index: 10;
-  top: 0%;
+  top: 0;
   left: 0;
   -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;

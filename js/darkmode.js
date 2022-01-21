@@ -7,6 +7,7 @@ const settingIconMobile = document.querySelector(".setting-icon-mobile");
 const darkModeFunc = () => {
     settingIconDesktop.classList.remove("rotate-setting");
     settingIconMobile.classList.remove("fa-spin");
+    settingIconMobile.classList.remove("setting-icon-mobile-active");
     settingContainer.style.left = "-100%";
     darkModeButton.style.display = "none";
     lightModeButton.style.display = "flex";
@@ -23,6 +24,7 @@ const darkModeFunc = () => {
 const lightModeFunc = () => {
     settingIconDesktop.classList.remove("rotate-setting");
     settingIconMobile.classList.remove("fa-spin");
+    settingIconMobile.classList.remove("setting-icon-mobile-active");
     settingContainer.style.left = "-100%";
     darkModeButton.style.display = "flex";
     lightModeButton.style.display = "none";

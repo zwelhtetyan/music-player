@@ -52,8 +52,10 @@
     }
     .mobile-footer {
         background-color: $dark;
-        color: $white;
         border-top: none;
+        .mobile-menu-item {
+            color: $white;
+        }
     }
     .noti-alert-container {
         background-color: black;
