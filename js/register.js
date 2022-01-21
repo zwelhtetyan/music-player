@@ -9,7 +9,7 @@ const userAccountNameMobile = document.querySelector(".user-name-mobile");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    registerContainer.style.top = "-100%";
+    registerContainer.style.display = "none";
     const userName = userNameInput.value
 
     //for noti message
