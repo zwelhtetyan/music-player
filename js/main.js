@@ -255,7 +255,8 @@ songContainer.forEach((songs) => {
 });
 
 // for like or unlike;
-favorite.addEventListener('click', () => {
+favorite.addEventListener('click', (e) => {
+    e.stopPropagation();
     if (document.getElementById(favoriteId).classList.contains('liked')) {
         document.getElementById(favoriteId).classList.remove('liked');
         favorite.classList.remove('fas', 'fa-heart', 'text-danger');
