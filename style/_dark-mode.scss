@@ -13,7 +13,7 @@
         background-color: black;
         color: $white;
         .menu-title {
-            color: $text-white;  
+            color: $text-white;
         }
         p:hover {
             background-color: $dark-hover;
@@ -40,13 +40,13 @@
         color: $white;
         .artist-name {
             color: $text-white !important;
-        }   
+        }
         .song-container:hover {
             background-color: $dark-hover;
         }
     }
     .desktop-action-bar {
-        background-color: #607d8b;
+        background-color: $dark;
         border-top: $borderColor;
         color: $white;
     }

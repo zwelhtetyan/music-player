@@ -378,7 +378,7 @@ minimize.addEventListener('click', () => {
     if (desktopActionBar.classList.contains('desktop-action-bar-100vh')) {
         minimize.innerHTML = `<i class="feather-chevron-up expend-button"></i>`;
         if (window.innerWidth < 1100) {
-            desktopActionBar.style.bottom = '55px';
+            desktopActionBar.style.bottom = '54px';
         }
         desktopActionBar.classList.add('desktop-action-bar-8vh');
         setTimeout(() => {
