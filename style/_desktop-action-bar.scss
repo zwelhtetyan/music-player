@@ -64,6 +64,14 @@
                 flex-basis: 20%;
             }
         }
+        .duration-and-favContainer {
+            display: flex;
+            align-items: center;
+            .duration {
+                color: $green;
+                font-weight: 700;
+            }
+        }
     }
     .volume {
         width: 12%; // third
@@ -82,6 +90,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 2em;
         .favorite {
             padding: 0 20px;
             font-size: 20px;
@@ -146,7 +155,11 @@
         }
 
         .song-title-desktop-footer {
-            font-size: 25px;
+            font-size: 30px;
+            letter-spacing: $letter-spacing-2;
+        }
+        .artist-name-desktop-footer {
+            letter-spacing: $letter-spacing-2;
         }
     }
     .current-song-action {
@@ -190,19 +203,25 @@
                 margin: 0 20px;
             }
         }
-        .duration {
-            font-weight: 700;
-            // color: #ffc107;
-            color: $green;
+        .duration-and-favContainer {
+            display: flex;
+            align-items: center;
+            .duration {
+                font-weight: 700;
+                // color: #ffc107;
+                color: $green;
+            }
+            .favorite-container {
+                text-align: center;
+                margin-top: 3px;
+                font-size: 20px;
+                margin-left: 1em;
+            }
         }
     }
-    .favorite-container {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 20px;
-    }
+
     .volume {
-        margin-top: 10px;
+        margin-top: 1em;
         display: flex;
         align-items: center;
         justify-content: center;

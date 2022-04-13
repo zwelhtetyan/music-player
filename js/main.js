@@ -420,14 +420,16 @@ let isFilter = false;
 let numForFilterSong = '';
 //filter music
 const searchBox = document.querySelector('.search-music');
-const searchBoxMobile = document.querySelector('.search-box-mobile');
+const searchBoxMobile = document.querySelector(
+    '.search-box-mobile .search-music'
+);
 
 //for desktop search box
 searchBox.addEventListener('keyup', (e) => {
     filtering(e);
 });
 
-//for mobile search box
+// for mobile search box
 searchBoxMobile.addEventListener('keyup', (e) => {
     filtering(e);
 });

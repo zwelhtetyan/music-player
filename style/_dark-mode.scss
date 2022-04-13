@@ -4,6 +4,7 @@
         background-color: $dark;
         border: none;
         color: $white;
+        border-bottom: 1px solid $borderColorDark;
         .search-icon {
             color: black;
         }
@@ -33,6 +34,7 @@
             background-color: $dark;
             border: none;
             color: $white;
+            border-bottom: 1px solid $borderColorDark;
         }
     }
     .right-side {

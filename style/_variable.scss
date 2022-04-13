@@ -8,6 +8,8 @@ $text-white: rgba(255, 255, 255, 0.5);
 $dark-hover: #1a1a1a;
 $activeColor: #2196f3;
 $green: #399911;
+$borderColorDark: #343232;
+$letter-spacing-2: 2px;
 
 @mixin overflow($type) {
     overflow: $type;

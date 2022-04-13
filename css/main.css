@@ -365,6 +365,20 @@
       flex-basis: 20%;
 }
 
+.desktop-action-bar-8vh .current-song-action .duration-and-favContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desktop-action-bar-8vh .current-song-action .duration-and-favContainer .duration {
+  color: #399911;
+  font-weight: 700;
+}
+
 .desktop-action-bar-8vh .volume {
   width: 12%;
   display: -webkit-box;
@@ -394,6 +408,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 2em;
 }
 
 .desktop-action-bar-8vh .favorite-container .favorite {
@@ -514,7 +529,12 @@
 }
 
 .desktop-action-bar-100vh .current-song-container .song-title-desktop-footer {
-  font-size: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.desktop-action-bar-100vh .current-song-container .artist-name-desktop-footer {
+  letter-spacing: 2px;
 }
 
 .desktop-action-bar-100vh .current-song-action {
@@ -588,19 +608,29 @@
   margin: 0 20px;
 }
 
-.desktop-action-bar-100vh .current-song-action .duration {
+.desktop-action-bar-100vh .current-song-action .duration-and-favContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desktop-action-bar-100vh .current-song-action .duration-and-favContainer .duration {
   font-weight: 700;
   color: #399911;
 }
 
-.desktop-action-bar-100vh .favorite-container {
+.desktop-action-bar-100vh .current-song-action .duration-and-favContainer .favorite-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 3px;
   font-size: 20px;
+  margin-left: 1em;
 }
 
 .desktop-action-bar-100vh .volume {
-  margin-top: 10px;
+  margin-top: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,6 +878,7 @@
   background-color: #202022;
   border: none;
   color: #fdfdfd;
+  border-bottom: 1px solid #343232;
 }
 
 .dark-mode .header-row .search-icon {
@@ -885,6 +916,7 @@
   background-color: #202022;
   border: none;
   color: #fdfdfd;
+  border-bottom: 1px solid #343232;
 }
 
 .dark-mode .right-side {
