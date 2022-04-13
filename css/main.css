@@ -631,7 +631,6 @@
 }
 
 .mobile-footer {
-  border-top: 1px solid #dfd4d4fa;
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -846,7 +845,7 @@
 }
 
 .dark-mode .header-row {
-  background-color: #111111;
+  background-color: #202022;
   border: none;
   color: #fdfdfd;
 }
@@ -883,7 +882,7 @@
 }
 
 .dark-mode .center .logo-and-setting {
-  background-color: #111111;
+  background-color: #202022;
   border: none;
   color: #fdfdfd;
 }
@@ -902,13 +901,13 @@
 }
 
 .dark-mode .desktop-action-bar {
-  background-color: #111111;
+  background-color: #202022;
   border-top: #dfd4d4fa;
   color: #fdfdfd;
 }
 
 .dark-mode .mobile-footer {
-  background-color: #111111;
+  background-color: #202022;
   border-top: none;
 }
 
